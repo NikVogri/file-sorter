@@ -1,0 +1,21 @@
+{
+  "name": "file-sorter",
+  "version": "0.0.1",
+  "description": "Sort files by YYYYMMDD",
+  "main": "index.js",
+  "bin": {
+    "fs-sort": "index.js"
+  },
+  "keywords": [
+    "file",
+    "sorter",
+    "year",
+    "month",
+    "day"
+  ],
+  "author": "Nik Vogrinec",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.4.1"
+  }
+}
