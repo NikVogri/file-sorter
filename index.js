@@ -8,11 +8,10 @@ const { argv } = require("yargs")
 			.positional("input", {
 				alias: "i",
 				describe: "Input directory",
-				require: true,
-				default: process.cwd(),
+				require: false,
 			})
 			.positional("output", {
-				alias: "i",
+				alias: "o",
 				require: false,
 				describe: "Output directory",
 			});
@@ -59,7 +58,7 @@ function sortFilesByYYYYMMDD(dirPath) {
 
 		const fileDestPath = path.join(newDir, filename);
 		fs.renameSync(fileSrcPath, fileDestPath);
-		console.log(`File "${fileSrcPath}" was moved to "${fileDestPath}" directory`);
+		console.log(`File "${fileSrcPath}" was moved to "${fileDestPath}"`);
 	}
 }
 

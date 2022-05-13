@@ -1,10 +1,14 @@
 {
   "name": "file-sorter",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Sort files by YYYYMMDD",
   "main": "index.js",
   "bin": {
     "fs-sort": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikVogri/file-sorter"
   },
   "keywords": [
     "file",
