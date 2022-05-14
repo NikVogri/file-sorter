@@ -51,8 +51,11 @@ function sortFilesByYYYYMMDD(dirPath) {
 		const yyyymmdd = dateToYYYYMMDD(file.birthtime);
 		const newDir = path.join(OUTPUT_DIRECTORY ? OUTPUT_DIRECTORY : dirPath, yyyymmdd);
 
-		if (!dirCache[newDir] && !fs.existsSync(newDir)) {
-			fs.mkdirSync(newDir);
+		if (!dirCache[newDir]) {
+			if (!fs.existsSync(newDir)) {
+				fs.mkdirSync(newDir);
+			}
+
 			dirCache[newDir] = true;
 		}
 
